@@ -6,7 +6,7 @@ use std::path::{Path, PathBuf};
 
 fn main() {
   let matches = App::new("Datier")
-    .version("0.1.0")
+    .version("1.0.0")
     .author("Tilman Schmidt")
     .about("Renames JPEGs and related images based on the date they were taken")
     .arg(Arg::with_name("input directory")
