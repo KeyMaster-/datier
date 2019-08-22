@@ -107,9 +107,9 @@ fn main() {
 
     if let Some(ext) = path.extension() {
       let new_filename = format!("{}.{}", new_stem, ext.to_string_lossy());
-      let rename_dest = input_dir.with_file_name(new_filename);
+      let mut rename_dest = input_dir.to_path_buf();
+      rename_dest.push(new_filename);
       if !rename_dest.exists() {
-
         let rename_action = if !dry_run {
           let rename_res = fs::rename(&path, &rename_dest);
           match rename_res {
