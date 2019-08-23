@@ -13,5 +13,7 @@ Install [Rust](https://www.rust-lang.org/tools/install) (tested using rust versi
 ```
 git clone https://github.com/KeyMaster-/datier.git
 cd datier
-cargo run
+cargo build
 ```
+
+Instead of `cargo build`, you can also run `cargo install --path .` to make datier available in your terminal.
